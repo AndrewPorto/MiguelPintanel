@@ -1,0 +1,559 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    font-family: 'Poppins', sans-serif;
+    list-style: none;
+    
+}
+
+:root {
+    --shadow-color: rgba(0,0,0, .2);
+}
+
+.home {
+    background-image: url(/img/bluebg.jpg);
+    z-index: 2;
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: flex;
+    flex-direction: column;
+}
+
+body::before {
+    content: '';
+    background-color: rgba(0, 0, 0, 0.404);
+    width: 100%;
+    height: 100%;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    position: absolute;
+}
+
+
+
+.menu {
+    z-index: 999;
+    width: 100%;
+    position: fixed;
+    transition: .5s ease;
+}
+
+
+
+.container {
+	display: flex;
+	max-width: 1200px;
+    margin: 0 auto;
+    justify-content: space-between;
+    
+}
+
+.container .logo {
+    width: 250px;
+    
+}
+
+
+nav {
+   padding-top: 35px;
+   display: flex;
+   gap: 40px;
+}
+
+
+
+nav  a {
+    color: #FFF;
+    font-size: 20px;
+    font-weight: bold;
+    
+   
+}
+
+.menu.sticky {
+    background: #FFF;
+    box-shadow: 0 .1rem 1rem var(--shadow-color);
+}
+
+.menu.sticky .container .logo {
+    filter: drop-shadow(16px 16px 20px rgb(0, 118, 228)) invert(75%);
+}
+
+.menu.sticky nav a {
+    color: #165FE6;
+}
+
+
+.left {
+   display: flex;
+   width: 100%;
+   flex-direction: column;
+ 
+}
+
+.up {
+    height: 50vh;
+    width: 70%;
+    position: relative;
+    background: linear-gradient(135deg, #165FE6 50%, transparent 50%);
+   
+}
+
+.img-box {
+    position: absolute;
+    bottom: 25%;
+    left: 15%;
+    z-index: 99;
+    background: linear-gradient(#e44343, #696ead);
+    width: 390px;
+    height: 390px;
+    text-align: center;
+    border-radius: 50%;
+    border: 10px solid #FFF;
+    box-shadow: 0 .1rem 1rem var(--shadow-color);
+    transition: .5s ease;
+}
+
+.img-box img {
+    width: 250px;
+
+}
+
+
+
+.down {
+    height: 50vh;
+    width: 70%;
+    background: linear-gradient(45deg, #165FE6 50%, transparent 50%);
+    position: relative;
+}
+
+.right {
+    background: #165fe6af;
+    position: absolute;
+    bottom: 30%;
+    left: 55%;
+    width: 600px;
+    height: 300px;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    padding: 15px;
+    border-radius: 10px;
+  
+    transition: .5s ease;
+}
+
+.right:hover {
+    background: #165FE6;
+}
+
+
+
+.right > h2{
+    color: #FFF;
+    letter-spacing: 2px;
+    font-size: 2.8rem;
+  
+
+}
+
+.right h3 {
+    color: #FFF;
+    letter-spacing: 2px;
+    font-size: 1.8rem;
+}
+
+.right p {
+    color: #FFF;
+    letter-spacing: 2px;
+    font-size: 0.8rem;
+    margin-top: 15px;
+    text-align: justify;
+    opacity: 1;
+}
+
+.social a{
+    width: 40px;
+    height: 40px;
+    margin-top: 15px;
+    margin-right: 10px;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    color: #FFF;
+    border: 1px solid #FFF;
+    font-size: 25px;
+    transition: .5s ease;
+}
+
+.social a:hover {
+    background: #FFF;
+    color: #165FE6;
+    border-color: #165FE6;
+    opacity: 1;
+}
+
+.history {
+    height: 100vh;
+    background: #165FE6;;
+}
+
+.container .sobre {
+    margin-top: 200px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.sobre .sobre-text {
+   padding: 20px;
+   align-self: center;
+   min-width: 600px;
+}
+
+.sobre .sobre-text h2 {
+    color: #FFF;
+}
+
+.sobre .sobre-text h3 {
+    color: #FFF;
+    font-weight: bold;
+    font-size: 36px;
+    text-decoration: underline;
+    
+}
+
+.sobre .sobre-text p {
+    color: #FFF;
+    width: 500px;
+    text-align: justify;
+}
+
+.sobre-img {
+    position: relative;
+}
+
+.sobre .sobre-img img{
+    border-radius: 20px;
+
+}
+
+.sobre .sobre-img .img2 {
+   width: 100%;
+   
+}
+
+.sobre .sobre-img .img3 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    transition: .8s ease;
+    
+}
+
+.sobre .sobre-img .img3:hover {
+    opacity: 0;
+
+}
+
+.photos {
+    background: #165FE6;
+    display: flex;
+    flex-direction: column;
+}
+
+.galery {
+    text-align: center;
+    padding-top: 25px;
+
+}
+
+.galery h2 {
+    padding-bottom: 25px;
+    font-weight: bold;
+    color: #FFF;
+    text-decoration: underline;
+    font-size: 30px;
+    font-style: italic;
+}
+
+.swiper-section {
+    background: #165FE6;
+}
+
+.swiper {
+    width: 50%;
+    height: 50%;
+    background: #165FE6;
+  }
+
+  .swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    background: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .swiper-slide img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+
+  }
+
+  .swiper {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .footer {
+    text-align: center;
+    color: #165FE6;
+  }
+
+  .footer a {
+    color: #165FE6;
+  }
+
+  
+
+  @media (max-width: 992px) {
+
+
+
+	.container {
+        padding-left: 50px;
+        padding-right: 50px;
+    
+	}
+
+    .img-box {
+        width: 295px;
+        height: 295px;
+        
+    }
+
+    .img-box img {
+        width: 180px;
+    }
+
+    .right {
+        max-width: 400px;
+       
+    }
+
+    .right h2 {
+        font-size: 2rem;
+    }
+
+    .right h3 {
+        font-size: 1.5rem;
+    }
+
+    .history {
+        height: 50vh;
+     
+    }
+
+    .history .container,
+    .history .container .sobre-text,
+     .sobre-img {
+        height: 50vh;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .sobre {
+        align-items: center;
+        display: flex;
+        
+    }
+
+    .sobre .sobre-text {
+        min-width: 450px;
+    }
+
+    .sobre .sobre-text p {
+        max-width: 450px;
+   
+    }
+
+    .sobre .sobre-img {
+        width: 300px;
+        
+    }
+  
+}
+
+@media (max-width: 600px) {
+    body {
+        background: #165FE6;
+        overflow-x: hidden;
+    }
+    body::before {
+        background: #165FE6;
+    }
+  
+    .home {
+        background-image: none;
+        background: #165FE6;
+    }
+
+    .menu .container {
+        padding-left: 10px;
+        padding-right: 10px;
+        flex-direction: row;
+        justify-content: center;
+        
+	}
+
+    .container a .logo {
+        width: 250px;
+        margin: 0 auto;
+    }
+
+    .nav-bar {
+        display: none;
+    
+    }
+
+    .right {
+        flex-direction: column;
+    }
+
+    .img-box {
+        width: 235px;
+        height: 235px;
+        
+    }
+
+    .left {
+        height: 400px;
+    }
+
+
+ 
+    .central {
+        display: flex;
+        flex-direction: column;
+    }
+        
+    .img-box {
+        top: 130px;
+        left: 22%;
+      
+    }
+
+    .img-box img {
+        width: 140px;
+    }
+
+    .right {
+        flex-direction: column;
+        position: relative;
+        bottom: 0;
+        left: 0;
+        height: 0;
+        margin: 0 auto;
+        background: #FFF;
+        height: 300px;
+        text-align: center;
+        opacity: .9;
+    }
+
+    .right h2 {
+        color: #165FE6;
+    }
+
+    .right h3 {
+        color: #165FE6;
+    }
+
+    .right p {
+        color: #165FE6;
+    }
+
+    .right:hover {
+        background: #FFF;
+        opacity: 1;
+    }
+
+    .social a {
+        color: #165FE6;
+        border-color: #165FE6;
+    }
+
+    .social a:hover {
+        color: #FFF;
+        background: #165FE6;
+    }
+
+   
+
+    .history .container .sobre{
+        flex-direction: column;
+    }
+
+    .container .sobre {
+        margin-top: 200px;
+        padding: 20px;
+       
+      
+    }
+
+    .container .sobre .sobre-text {
+        width: 200px;
+        
+    }
+
+    .container .sobre .sobre-text h2,
+    .container .sobre .sobre-text h3
+     {
+        margin-left: 8px;
+    }
+
+    .container .sobre .sobre-text p {
+        width: 390px;
+        text-align: justify;
+        margin-left: 8px;
+    }
+
+    .history .container .sobre-text, .sobre-img {
+        height: 34vh;
+    }
+
+ 
+
+    .sobre .sobre-img {
+        width: 400px;
+    }
+
+    .photos {
+        margin-top: 230px;
+    }
+
+    .footer {
+        background-color: #FFF;
+    }
+
+    .footer h4, a{
+        color: #165FE6;
+    }
+
+    .swiper {
+        margin-top: 30px;
+        width: 90%;
+        height: 70%;
+    }
+}
